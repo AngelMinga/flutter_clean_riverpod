@@ -1,34 +1,41 @@
-# clean_provider
+# Flutter Clean Architecture with Riverpod
 
-A new Flutter project.
+This project demonstrates a scalable Flutter application structure based on Clean Architecture principles and Provider for state management.
 
-## Getting Started
+The goal is to create maintainable, testable, and modular Flutter applications by separating the code into independent layers.
 
-This project is a starting point for a Flutter application.
+## Architecture
 
-A few resources to get you started if this is your first Flutter project:
+The project follows a layered architecture:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Presentation
+- Domain
+- Data
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Each layer has a clear responsibility and communicates through well-defined abstractions.
 
+## State Management
 
+State management is implemented using Provider to keep the UI reactive and the business logic organized.
+
+## Project Structure
+
+## Project Structure
+
+```
 📁 project_root/
-├── packages/                  # (opcional si decides modularizar)
-│   ├── core/                  # lógica compartida (usecases, utils, themes, constants, error)
-│   ├── features/              # cada feature puede ser un package
+├── packages/                  # (optional if modularizing)
+│   ├── core/                  # shared logic (usecases, utils, themes, constants, errors)
+│   ├── features/
 │   │   ├── user/
 │   │   └── recipe/
-│   └── shared_widgets/        # componentes UI comunes reutilizables
+│   └── shared_widgets/        # reusable UI components
 │
 ├── lib/
-│   ├── app.dart               # Configuración general de la app
-│   ├── main.dart              # Punto de entrada
-│   ├── routes/                # Navegación (AppRouter, GoRouter, etc.)
-│   ├── core/                  # Si no modularizas aún
+│   ├── app.dart               # app configuration
+│   ├── main.dart              # entry point
+│   ├── routes/                # navigation
+│   ├── core/
 │   ├── features/
 │   │   ├── user/
 │   │   │   ├── data/
@@ -38,7 +45,7 @@ samples, guidance on mobile development, and a full API reference.
 │   │       ├── data/
 │   │       ├── domain/
 │   │       └── presentation/
-│   └── shared/                # temas, widgets, constantes compartidas
+│   └── shared/
 │
 ├── test/
 │   ├── features/
@@ -46,4 +53,17 @@ samples, guidance on mobile development, and a full API reference.
 │
 ├── pubspec.yaml
 └── README.md
+```
+
+## Features
+
+- Clean Architecture
+- Provider state management
+- Repository pattern
+- Separation of concerns
+- Scalable structure for large applications
+
+## Purpose
+
+This repository serves as a reference implementation for building Flutter applications using Clean Architecture and Provider.
 
